@@ -10,6 +10,8 @@
     <!-- Include Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Your Custom Styles -->
     <link rel="stylesheet" href="styles.css">
     <!-- Mapbox CSS -->
@@ -21,19 +23,6 @@
     <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
 </head>
 <body>
-   <!-- Bootstrap Navbar -->
-   <nav class="navbar position-relative z-index-10 py-2 px-3 bg-light font-weight-normal" style="font-family: 'EB Garamond', sans-serif; background-color: #f9f4f4 !important;">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span> Menu
-    </button>
-    <div class="collapse navbar-collapse" id="navbarToggle">
-        <ul class="navbar-nav">
-            <li class="nav-item">
-                <a class="nav-link" href="contact.html">Contact Us</a>
-            </li>
-        </ul>
-    </div>
-</nav>
 
     <!-- Upper section starts -->
     <div class="upper-section">
@@ -81,8 +70,8 @@
                     <div class="row justify-content-center">
                         <div class="col-md-4 text-center">
                             <img src="Bloom Logo.png" alt="Bloom Paediatric Studio Logo" class="logo-img mb-3">
-                            <p class="mb-0">p: 0451 442 778</p>
-                            <p class="mb-0">e: hello@bloom-ps.com.au</p>
+                            <p class="mb-0"><i class="fab fa-facebook-square"></i> <a href="https://www.facebook.com/profile.php?id=61555410512704" target="_blank">Facebook page</a></p>
+                            <p class="mb-0"><i class="fas fa-envelope"></i> <a href="mailto:hello@bloom-ps.com.au?subject=Inquiry from Website">hello@bloom-ps.com.au</a></p>
                             <p class="mb-0">by appointment only</p>
                         </div>
                     </div>
@@ -91,7 +80,34 @@
         </main>
       </div>
 
+      <!-- Map Section -->
+    <div class="map-container">
+        <div id="map"></div>
+        <div class="location-label">
+            <p>Location: Emu Heights NSW, Australia</p>
+        </div>
+    </div>
+
     <!-- Lower section ends -->
+    <!-- Mapbox GL JS -->
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
+    <!-- Your Map Initialization Script -->
+    <script>
+        mapboxgl.accessToken = process.env.MAPBOX_API_KEY;
+        var map = new mapboxgl.Map({
+            container: 'map', // container id
+            style: 'mapbox://styles/mapbox/light-v11', // style URL
+            center: [150.65, -33.7385], // starting position [lng, lat]
+            zoom: 14.5 // starting zoom
+        });
+
+        // Add a marker to the map
+        new mapboxgl.Marker()
+            .setLngLat([150.65, -33.7385])
+            .setPopup(new mapboxgl.Popup({ offset: 25 }) // add popups
+            .setHTML('Location: Emu Heights NSW, Australia'))
+            .addTo(map);
+    </script>
 
     <!-- Bootstrap JS and its dependencies -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
