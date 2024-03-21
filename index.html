@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bloom Paediatric Studio specialises in supporting children's development milestones. Join us as your child blooms into their full potential.">
+    <meta name="keywords" content="paediatric, child development, milestones, support, bloom">
+    <meta name="author" content="Bloom Paediatric Studio">
+    <title>Bloom Paediatric Studio</title>
+    <!-- Include Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Your Custom Styles -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Mapbox CSS -->
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
+    <!-- Mapbox JavaScript -->
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
+</head>
+<body>
+
+    <!-- Upper section starts -->
+    <div class="upper-section">
+        <header class="header-container text-center">
+            <!-- Your existing header content -->
+            <h1 class="title">b l o o m</h1>
+            <p class="subtitle">paediatric studio</p>
+        </header>
+    </div>
+
+    <svg class="wave-separator-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path fill="#ffffff" fill-opacity="1" d="M0,192L60,181.3C120,171,240,149,360,138.7C480,128,600,128,720,154.7C840,181,960,235,1080,229.3C1200,224,1320,160,1380,128L1440,96L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path>
+    </svg>
+
+     <!-- Lower section starts -->
+     <div class="lower-section">
+        <main>
+            <section class="about container my-5">
+                <div class="row align-items-center">
+                  <div class="col-md-6 order-md-1 order-2">
+                    <h2 class="mb-4">where <em>every</em> milestone matters</h2>
+                    <p class="mb-4">We know what it feels like to be waiting a lot longer than everyone else for those first words and those first steps. Bloom PS is here to strengthen our local community by providing paediatric therapy & support for the parents.</p>
+                    <p class="mb-4 font-weight-bold">Supported parents support their children, and supported children bloom.</p>
+                  </div>
+                  <div class="col-md-6 order-md-2 order-1 text-center mb-4 mb-md-0">
+                    <div class="image-container">
+                        <img src="Bloom Flowers.png" alt="Hand-drawn flowers" class="img-fluid">
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+            <!-- Add the new wavy line and contact details -->
+            <div class="wavy-line-container">
+                <svg class="wave-separator-2 bottom" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                    <path fill="#ffffff" fill-opacity="1" d="M0,192L60,181.3C120,171,240,149,360,138.7C480,128,600,128,720,154.7C840,181,960,235,1080,229.3C1200,224,1320,160,1380,128L1440,96L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path>
+                </svg>
+            </div>
+
+            <div class="contact-details py-5">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-md-4 text-center">
+                            <img src="Bloom Logo.png" alt="Bloom Paediatric Studio Logo" class="logo-img mb-3">
+                            <p class="mb-0"><i class="fab fa-facebook-square"></i> <a href="https://www.facebook.com/profile.php?id=61555410512704" target="_blank">Facebook page</a></p>
+                            <p class="mb-0"><i class="fas fa-envelope"></i> <a href="mailto:hello@bloom-ps.com.au?subject=Inquiry from Website">hello@bloom-ps.com.au</a></p>
+                            <p class="mb-0">by appointment only</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+      </div>
+
+      <!-- Map Section -->
+    <div class="map-container">
+        <div id="map"></div>
+        <div class="location-label">
+            <p>Location: Emu Heights NSW, Australia</p>
+        </div>
+    </div>
+
+    <!-- Lower section ends -->
+    <!-- Mapbox GL JS -->
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
+    <!-- Your Map Initialization Script -->
+    <script>
+        mapboxgl.accessToken = 'MAPBOX_API_KEY_PLACEHOLDER';
+        var map = new mapboxgl.Map({
+            container: 'map', // container id
+            style: 'mapbox://styles/mapbox/light-v11', // style URL.
+            center: [150.65, -33.7385], // starting position [lng, lat]
+            zoom: 14.5 // starting zoom
+        });
+
+        // Add a marker to the map
+        new mapboxgl.Marker()
+            .setLngLat([150.65, -33.7385])
+            .setPopup(new mapboxgl.Popup({ offset: 25 }) // add popups
+            .setHTML('Location: Emu Heights NSW, Australia'))
+            .addTo(map);
+    </script>
+
+    <!-- Bootstrap JS and its dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
