@@ -1,0 +1,1 @@
+mapboxgl.accessToken = 'MAPBOX_API_KEY_PLACEHOLDER';
