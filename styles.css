@@ -48,7 +48,7 @@ html {
 /* Adjust font sizes for smaller screens */
 @media (max-width: 991px) {
 h1.title {
-    font-size: 20vw; /* Adjust as needed */
+    font-size: 18vw; /* Adjust as needed */
 }
 p.subtitle {
     font-size: 4vw; /* Adjust as needed */
@@ -89,6 +89,7 @@ header p {
 
 header p.subtitle {
   letter-spacing: 0.6em; /* This adds space between the letters */
+  margin-left: 0.4em; /* Adjust the value as needed */
   /* Add other styles as needed */
 }
 
