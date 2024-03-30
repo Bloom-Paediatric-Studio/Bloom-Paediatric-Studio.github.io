@@ -57,7 +57,10 @@ h2 {
     font-size: 5vw; /* Adjust as needed */
 }
 p {
-    font-size: 3.5vw; /* Adjust as needed */
+    font-size: 5.5vw; /* Adjust as needed */
+}
+a {
+  font-size: 5.5vw; /* Adjust as needed */
 }
 }
 
@@ -268,7 +271,7 @@ padding-right: 20px; /* Adjust the value as needed */
 
 .about p {
   font-family: 'EB Garamond', serif;
-  font-size: .9rem; /* Adjust the font-size as needed to match the screenshot */
+  font-size: 1.2rem; /* Adjust the font-size as needed to match the screenshot */
   color: #000000;
   line-height: 1.6;
   padding-left: 20px; /* Adjust the value as needed */
@@ -498,3 +501,26 @@ color: #333; /* Dark gray color */
 }
 }
 
+
+/* Download Button Styling */
+.download-button {
+  font-family: 'EB Garamond', serif; /* Consistent with your theme */
+  font-size: 1rem; /* Adjust based on your design preference */
+  background-color: #6B4D38; /* Harmonizing with your color scheme */
+  color: white; /* Contrast color for readability */
+  border: none; /* Cleaner look without border */
+  padding: 10px 20px; /* Adequate padding for button size */
+  text-transform: uppercase; /* Stylistic choice for button text */
+  text-decoration: none; /* Removes underline from link */
+  display: inline-block; /* Allows the application of padding and margins */
+  margin: 20px 0; /* Space above and below the button */
+  margin-left: 20px;
+  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+  border-radius: 5px; /* Softens the corners of the button */
+}
+
+.download-button:hover, .download-button:focus {
+  background-color: #8C5E58; /* Slightly lighter brown for hover/focus */
+  color: white; /* Maintains text color consistency on hover/focus */
+  text-decoration: none; /* Ensures text remains not underlined on hover/focus */
+}
