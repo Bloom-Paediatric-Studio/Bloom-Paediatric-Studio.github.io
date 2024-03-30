@@ -1,1 +1,1 @@
-mapboxgl.accessToken = 'pk.eyJ1IjoiZGp0aG9ybnRvbiIsImEiOiJjbGZtMzFybzAwN3hkM3BwOXhqeXN3eWNtIn0.s8hxSeLFkIeNk-iukUbLlA';
+mapboxgl.accessToken = 'pk.eyJ1IjoiZGp0aG9ybnRvbiIsImEiOiJjbHQ5eDhpM2gxOTRxMnFwdGNvYWQ0N2oyIn0.PC3PL79ac4eZg4pTWWraNg';
