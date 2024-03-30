@@ -1,4 +1,5 @@
-mapboxgl.accessToken = 'pk.eyJ1IjoiZGp0aG9ybnRvbiIsImEiOiJjbHQ5eDhpM2gxOTRxMnFwdGNvYWQ0N2oyIn0.PC3PL79ac4eZg4pTWWraNg'; // Replace this with your actual Mapbox API key
+// Get the Mapbox API key from the environment variable
+mapboxgl.accessToken = process.env.MAPBOX_API_KEY;
 
 window.onload = function() {
     var map = new mapboxgl.Map({
