@@ -53,15 +53,13 @@ h1.title {
 p.subtitle {
     font-size: 4vw; /* Adjust as needed */
 }
-h2 {
-    font-size: 5vw; /* Adjust as needed */
 }
-p {
-    font-size: 5.5vw; /* Adjust as needed */
-}
-a {
-  font-size: 5.5vw; /* Adjust as needed */
-}
+
+@media (min-width: 767px) and (max-width: 991px) {
+  .email-text {
+      font-size: 0.9rem; /* Adjust font size as needed */
+      white-space: nowrap; /* Prevents wrapping */
+  }
 }
 
 /* Adjust layout for smaller screens */
@@ -246,16 +244,44 @@ height: auto;
   padding-top: 50px; /* Default top padding */
 }
 
-@media (max-width: 767px) {
+@media (min-width: 768px) and (max-width: 991.98px) {
   .wavy-line-container {
-      padding-top: 300px; /* Adjust this value as needed */
+      margin-top: 200px; /* Adjust this value as needed */
+      padding-top: 50px; /* Adjust this value as needed */
   }
 }
 
 @media (max-width: 767px) {
-.image-container img {
-    max-width: 80%; /* Adjust this value as needed */
+  .wavy-line-container {
+      margin-top: 300px;
+      padding-top: 300px; /* Adjust this value as needed */
+  }
 }
+
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .image-container img {
+      width: 110% !important; /* Adjusts the image to take the full width of its container */
+      max-width: none !important; /* Overrides any max-width property */
+      height: auto !important; /* Keeps the aspect ratio intact */
+  }
+}
+
+/* Resets or overrides for Bootstrap's padding/margin at medium devices (≥768px and <992px) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .image-container {
+      padding: 0 !important; /* Removes padding */
+      margin: 0 !important; /* Removes margin */
+      /* Adjust the values as needed or add other properties to reset/override */
+  }
+}
+
+/* Custom padding/margin for small devices (≤767px) */
+@media (max-width: 767.98px) {
+  .image-container {
+    max-width: 80%; /* Adjust this value as needed */
+    margin-top: 110px;
+  }
 }
 
 /* About section styling */
