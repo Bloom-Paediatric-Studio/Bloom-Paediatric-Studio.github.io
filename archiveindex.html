@@ -96,50 +96,14 @@
 <script>
     // JavaScript to handle consent
     function acceptConsent() {
-        // Send AJAX request to create new issue with consent data
-        fetch('https://api.github.com/repos/Bloom-Paediatric-Studio/Bloom-Paediatric-Studio.github.io/issues', {
-            method: 'POST',
-            headers: {
-                'Authorization': 'token your_access_token',
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
-                title: 'User Consent',
-                body: 'User has given consent.',
-                labels: ['consent'],
-            }),
-        })
-        .then(response => {
-            if (response.ok) {
-                // Consent stored successfully, hide consent banner
-                document.getElementById('consent-banner').style.display = 'none';
-            } else {
-                // Handle error
-                console.error('Failed to store consent:', response.statusText);
-            }
-        })
-        .catch(error => {
-            console.error('Error:', error);
-        });
+        document.getElementById('consent-banner').style.display = 'none';
+        localStorage.setItem('consentGiven', 'true');
     }
 
-    // Check if consent has been given on page load
     window.onload = function() {
-        // Send request to GitHub API to check if consent issue exists
-        fetch('https://api.github.com/repos/Bloom-Paediatric-Studio/Bloom-Paediatric-Studio.github.io/issues?labels=consent')
-        .then(response => response.json())
-        .then(data => {
-            if (data.length > 0) {
-                // Consent already given, hide consent banner
-                document.getElementById('consent-banner').style.display = 'none';
-            } else {
-                // Consent not given, show consent banner
-                document.getElementById('consent-banner').style.display = 'block';
-            }
-        })
-        .catch(error => {
-            console.error('Error:', error);
-        });
+        if (!localStorage.getItem('consentGiven')) {
+            document.getElementById('consent-banner').style.display = 'block';
+        }
     };
 </script>
 </body>
