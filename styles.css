@@ -530,17 +530,18 @@ color: #333; /* Dark gray color */
 
 /* Download Button Styling */
 .download-button {
-  font-family: 'EB Garamond', serif; /* Consistent with your theme */
+  font-family: 'Megidana', serif; /* Consistent with your theme */
   font-size: 1rem; /* Adjust based on your design preference */
   background-color: #6B4D38; /* Harmonizing with your color scheme */
   color: white; /* Contrast color for readability */
   border: none; /* Cleaner look without border */
   padding: 10px 20px; /* Adequate padding for button size */
-  text-transform: uppercase; /* Stylistic choice for button text */
+  text-transform: uppercase;  /* Stylistic choice for button text */
   text-decoration: none; /* Removes underline from link */
   display: inline-block; /* Allows the application of padding and margins */
   margin: 20px 0; /* Space above and below the button */
   margin-left: 20px;
+  letter-spacing: 0.6em; /* This adds space between the letters */
   transition: background-color 0.3s ease; /* Smooth transition for hover effect */
   border-radius: 5px; /* Softens the corners of the button */
 }
@@ -549,4 +550,32 @@ color: #333; /* Dark gray color */
   background-color: #8C5E58; /* Slightly lighter brown for hover/focus */
   color: white; /* Maintains text color consistency on hover/focus */
   text-decoration: none; /* Ensures text remains not underlined on hover/focus */
+}
+
+.footer {
+  background-color: #f9f9f9;
+  padding: 20px 0;
+  /*position: fixed;*/
+  bottom: -60px;
+  width: 100%;
+  text-align: center;
+}
+
+.footer p {
+  margin-bottom: 0px;
+}
+
+.footer a {
+  color: #333;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
