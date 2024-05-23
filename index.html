@@ -79,5 +79,31 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
+<!-- Consent Banner -->
+<div id="consent-banner" style="display: none; position: fixed; bottom: 0; width: 100%; background-color: #f9f4f4; padding: 1rem; text-align: center; border-top: 1px solid #ccc;">
+    <p>
+        I acknowledge that I have read and understand and agree to be bound by the 
+        <a href="terms.pdf" download="Website_Terms_and_Conditions.pdf">Website Terms and Conditions</a> and the
+        <a href="privacy.pdf"  download="Privacy_Policy.pdf">Privacy Policy</a>.
+    </p>
+    <p>
+       Our website does not use any cookies aside from your consent to the information in this banner.
+    </p>
+    <button onclick="acceptConsent()">Accept</button>
+</div>
+
+<script>
+    // JavaScript to handle consent
+    function acceptConsent() {
+        document.getElementById('consent-banner').style.display = 'none';
+        localStorage.setItem('consentGiven', 'true');
+    }
+
+    window.onload = function() {
+        if (!localStorage.getItem('consentGiven')) {
+            document.getElementById('consent-banner').style.display = 'block';
+        }
+    };
+</script>
 </body>
 </html>
