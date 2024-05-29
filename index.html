@@ -115,17 +115,24 @@
 </script>
 
 <script>
-    function isMobileDevice() {
-        return /Mobi|Android/i.test(navigator.userAgent);
+    function isiPhone() {
+        return /iPhone/i.test(navigator.userAgent);
+    }
+
+    function isAndroid() {
+        return /Android/i.test(navigator.userAgent);
     }
 
     function handleDownloadButtonClick() {
-        if (isMobileDevice()) {
-            // Display a message for mobile users
-            alert("We notice that you're using a mobile device to open the intake form. Please note that to fill out the intake form on a mobile device you will need to save the file to your device and fill using a compatible PDF reader app (e.g. Adobe). If you are using an iPhone, you can save the file to your device by pressing the 'up arrow' icon at the bottom of the screen, and scrolling down to 'Save to Files'.");
+        if (isiPhone()) {
+            // Display message for iPhone users
+            alert("We notice that you're using an iPhone to open the intake form. To fill out the intake form on an iPhone, use Safari to save the file to your device by pressing the 'up arrow' icon at the bottom of the screen, and scrolling down to 'Save to Files'. Then navigate to 'Files' on your device to fill out the form.");
+        } else if (isAndroid()) {
+            // Display message for Android users
+            alert("We notice that you're using an Android device to open the intake form. To fill out the intake form on an Android device, you will need to save the file to your device and fill using a compatible PDF reader app (e.g. Adobe Acrobat Reader).");
         } else {
-            // Proceed with the download for non-mobile users
-            window.location.href = "waitlist-form.pdf";
+            // Display a generic message for other devices
+            alert("We notice that you're using a mobile device to open the intake form. To fill out the intake form on a mobile device you will need to save the file to your device and fill using a compatible PDF reader app (e.g. Adobe Acrobat Reader).");
         }
     }
 
@@ -133,6 +140,7 @@
         document.querySelector(".download-button").addEventListener("click", handleDownloadButtonClick);
     });
 </script>
+
 
 <!-- Bootstrap JS and its dependencies -->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
