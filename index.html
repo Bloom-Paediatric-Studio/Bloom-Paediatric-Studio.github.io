@@ -42,7 +42,11 @@
                     <h2 class="mb-4">where <em>every</em> milestone matters</h2>
                     <p class="mb-4">We know what it feels like to be waiting a lot longer than everyone else for those first words and those first steps. Bloom PS is here to strengthen the families in our local community by providing paediatric therapy, and support for the parents.</p>
                     <p class="mb-4 font-weight-bold">Supported parents support their children, and supported children bloom.</p>
-                    <a href="waitlist-form.pdf" class="download-button" download="Waitlist_Form.pdf">Download intake form</a>                </div>
+                    <a href="waitlist-form.pdf" class="download-button" download="Waitlist_Form.pdf">Download intake form</a>  
+                    <!--<p class="mb-0">
+                    To fill out the intake form on a mobile device, save the file to your device and fill using a compatible PDF reader app (e.g. Adobe).
+                    </p>-->
+                </div>
                   <div class="col-md-6 order-md-2 order-1 text-center mb-4 mb-md-0">
                     <div class="image-container">
                         <img src="Bloom Flowers.png" alt="Hand-drawn flowers" class="img-fluid">
@@ -109,6 +113,27 @@
         }
     };
 </script>
+
+<script>
+    function isMobileDevice() {
+        return /Mobi|Android/i.test(navigator.userAgent);
+    }
+
+    function handleDownloadButtonClick() {
+        if (isMobileDevice()) {
+            // Display a message for mobile users
+            alert("We notice that you're using a mobile device to open the intake form. Please note that to fill out the intake form on a mobile device you will need to save the file to your device and fill using a compatible PDF reader app (e.g. Adobe). If you are using an iPhone, you can save the file to your device by pressing the 'up arrow' icon at the bottom of the screen, and scrolling down to 'Save to Files'.");
+        } else {
+            // Proceed with the download for non-mobile users
+            window.location.href = "waitlist-form.pdf";
+        }
+    }
+
+    document.addEventListener("DOMContentLoaded", function() {
+        document.querySelector(".download-button").addEventListener("click", handleDownloadButtonClick);
+    });
+</script>
+
 <!-- Bootstrap JS and its dependencies -->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
