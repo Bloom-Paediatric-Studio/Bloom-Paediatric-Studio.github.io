@@ -33,9 +33,13 @@ height: 100%;
 }
 
 /* Keep the original font sizes for larger screens */
-@media (min-width: 992px) {
+@media (min-width: 992px) and (max-width: 1199.98px) {
 html {
     font-size: 16px; /* Default font size */
+}
+.wavy-line-container {
+  margin-top: 150px; /* Adjust this value as needed */
+  padding-top: 100px; /* Adjust this value as needed */
 }
 }
 
@@ -246,8 +250,8 @@ height: auto;
 
 @media (min-width: 768px) and (max-width: 991.98px) {
   .wavy-line-container {
-      margin-top: 200px; /* Adjust this value as needed */
-      padding-top: 50px; /* Adjust this value as needed */
+      margin-top: 250px; /* Adjust this value as needed */
+      padding-top: 100px; /* Adjust this value as needed */
   }
 }
 
