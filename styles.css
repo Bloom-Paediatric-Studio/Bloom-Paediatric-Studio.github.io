@@ -285,6 +285,7 @@ height: auto;
 /* Custom padding/margin for small devices (≤767px) */
 @media (max-width: 767.98px) {
   .image-container {
+    margin-left: 9%;
     max-width: 70%; /* Adjust this value as needed */
     margin-top: 110px;
   }
