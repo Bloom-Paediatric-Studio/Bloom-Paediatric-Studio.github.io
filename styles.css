@@ -198,7 +198,7 @@ color: #8C5E58; /* Set the desired hover color */
 .container {
   position: relative;
   background-color: transparent;  /*Or the same color as .lower-section if needed*/
-  height: 50vh;  /*Adjust the height as needed */
+  height: 30vh;  /*Adjust the height as needed */
 }
 
 .bottom {
@@ -209,6 +209,8 @@ color: #8C5E58; /* Set the desired hover color */
   font-family: 'EB Garamond', sans-serif;
   color: #6B4D38;
   background-color: #F9F4F4;
+  padding-top: 1rem !important;  /* Adjust as needed */
+  padding-bottom: 1rem !important; /* Adjust as needed */
 }
 
 .logo-circle {
@@ -224,7 +226,7 @@ color: #8C5E58; /* Set the desired hover color */
 }
 
 .logo-img {
-max-width: 200px;
+max-width: 120px;
 height: auto;
 }
 
@@ -245,20 +247,20 @@ height: auto;
 }
 
 .wavy-line-container {
-  padding-top: 50px; /* Default top padding */
+  padding-top: 350px; /* Default top padding */
 }
 
 @media (min-width: 768px) and (max-width: 991.98px) {
   .wavy-line-container {
-      margin-top: 250px; /* Adjust this value as needed */
-      padding-top: 100px; /* Adjust this value as needed */
+      margin-top: 200px; /* Adjust this value as needed */
+      padding-top: 400px; /* Adjust this value as needed */
   }
 }
 
 @media (max-width: 767px) {
   .wavy-line-container {
-      margin-top: 300px;
-      padding-top: 300px; /* Adjust this value as needed */
+      margin-top: 400px;
+      padding-top: 500px; /* Adjust this value as needed */
   }
 }
 
@@ -283,7 +285,7 @@ height: auto;
 /* Custom padding/margin for small devices (≤767px) */
 @media (max-width: 767.98px) {
   .image-container {
-    max-width: 80%; /* Adjust this value as needed */
+    max-width: 70%; /* Adjust this value as needed */
     margin-top: 110px;
   }
 }
@@ -297,6 +299,14 @@ height: auto;
   color: #6B4D38;
   padding-left: 20px; /* Adjust the value as needed */
 padding-right: 20px; /* Adjust the value as needed */
+}
+
+.about h3 {
+  font-family: 'EB Garamond', serif;
+  font-size: 2.3rem;
+  color: #6B4D38;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .about p {
@@ -344,7 +354,7 @@ padding-right: 20px; /* Adjust the value as needed */
   color: #6B4D38;
   border: 2px solid #6B4D38;
   padding-top: 1rem; /* Add top padding */
-  padding-bottom: 1rem; /* Add bottom padding */  
+  padding-bottom: 5rem; /* Add bottom padding */  
   padding-left: 20px; /* Adjust the value as needed */
   padding-right: 20px; /* Adjust the value as needed */  
   text-transform: uppercase;
@@ -534,18 +544,18 @@ color: #333; /* Dark gray color */
 
 /* Download Button Styling */
 .download-button {
-  font-family: 'Megidana', serif; /* Consistent with your theme */
+  font-family: 'EB Garamond', serif; /* Consistent with your theme */
   font-size: 1rem; /* Adjust based on your design preference */
   background-color: #6B4D38; /* Harmonizing with your color scheme */
   color: white; /* Contrast color for readability */
   border: none; /* Cleaner look without border */
   padding: 10px 20px; /* Adequate padding for button size */
-  text-transform: uppercase;  /* Stylistic choice for button text */
+  /*text-transform: uppercase;   Stylistic choice for button text */
   text-decoration: none; /* Removes underline from link */
   display: inline-block; /* Allows the application of padding and margins */
   margin: 20px 0; /* Space above and below the button */
   margin-left: 20px;
-  letter-spacing: 0.6em; /* This adds space between the letters */
+  letter-spacing: 0.3em; /* This adds space between the letters */
   transition: background-color 0.3s ease; /* Smooth transition for hover effect */
   border-radius: 5px; /* Softens the corners of the button */
 }
@@ -582,4 +592,40 @@ color: #333; /* Dark gray color */
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+
+/* Wave Text Container */
+.wave-text-container {
+  position: relative;
+}
+
+.wave-text {
+  font-size: 2rem;
+  fill: #6B4D38;
+  font-family: 'EB Garamond', serif;
+  text-align: center;
+  white-space: nowrap;
+  letter-spacing: 0.7em; /* Adjust letter spacing as needed */
+  word-spacing: 0.1em;     /* Adjust word spacing as needed */
+  dominant-baseline: text-after-edge; /* Align text baseline to the bottom edge */
+  baseline-shift: -1.8em; /* Move text further down, adjust as needed */
+}
+
+
+.wave-text em {
+  font-style: italic;
+}
+
+
+.vertical-space {
+  height: 40px; /* Adjust this value as needed */
+}
+
+p.mb-0 a {
+  margin-right: 10px; /* Adjust as needed */
+}
+
+p.mb-0 a:last-child {
+  margin-right: 0; /* Remove margin for the last icon */
 }

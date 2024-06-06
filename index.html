@@ -29,9 +29,21 @@
         </header>
     </div>
 
-    <svg class="wave-separator-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-        <path fill="#ffffff" fill-opacity="1" d="M0,192L60,181.3C120,171,240,149,360,138.7C480,128,600,128,720,154.7C840,181,960,235,1080,229.3C1200,224,1320,160,1380,128L1440,96L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path>
-    </svg>
+    <!-- Wavy Line with Text -->
+    <div class="wave-text-container">
+        <svg class="wave-separator-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <defs>
+                <path id="wavePath" d="M0,192L60,181.3C120,171,240,149,360,138.7C480,128,600,128,720,154.7C840,181,960,235,1080,229.3C1200,224,1320,160,1380,128L1440,96L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path>
+            </defs>
+            <path fill="#ffffff" fill-opacity="1" d="M0,192L60,181.3C120,171,240,149,360,138.7C480,128,600,128,720,154.7C840,181,960,235,1080,229.3C1200,224,1320,160,1380,128L1440,96L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path>
+            <text width="100%">
+                <textPath href="#wavePath" startOffset="23%" text-anchor="middle" class="wave-text">
+                    where every milestone matters
+                </textPath>
+            </text>
+        </svg>
+    </div>
+
 
      <!-- Lower section starts -->
      <div class="lower-section">
@@ -39,11 +51,21 @@
             <section class="about container my-5">
                 <div class="row align-items-center">
                   <div class="col-md-6 order-md-1 order-2">
-                    <h2 class="mb-4">where <em>every</em> milestone matters</h2>
-                    <p class="mb-4">We know what it feels like to be waiting a lot longer than everyone else for those first words and those first steps. Bloom PS is here to strengthen the families in our local community by providing paediatric therapy, and support for the parents.</p>
-                    <p class="mb-4 font-weight-bold">Supported parents support their children, and supported children bloom.</p>
-                    <p class="mb-2">We are currently taking new patients starting in June 2024! Please fill out the intake form and <a href="mailto:hello@bloom-ps.com.au?subject=Intake Form">email it back to us</a>, we will get in touch with you if we can offer you a position.</p>
-                    <a href="waitlist-form.pdf" class="download-button" download="Waitlist_Form.pdf">Download intake form</a>  
+                    <!-- <h3 class="mb-4 text-center">where <em>every</em> milestone matters</h3>-->
+                    <h3 class="mb-4">what we do</h3>
+                    <p class="mb-2">We provide Paediatric Occupational Therapy. We are taking new patients from June, 2024. </p>
+                    <!--<p class="mb-4 font-weight-bold">Supported parents support their children, and supported children bloom.</p>-->
+                    <!-- VERTICAL WHITESPACE HERE -->
+                    <div class="vertical-space"></div>
+                    <h3 class="mb-4">who we are</h3>
+                    <p class="mb-2">We are a young family who know what it feels like to be waiting a lot longer than everyone else for those first words and those first steps. We are passionate about strengthening families in our local community by providing therapy for kids, and support for parents.</p>
+                    <div class="vertical-space"></div>
+                    <h3 class="mb-4">where we are</h3>
+                    <p class="mb-2">Our clinic is in Emu Heights, NSW, 2750.</p>
+                    <div class="vertical-space"></div>
+                    <h3 class="mb-4">join us</h3>
+                    <p class="mb-2">To join us at Bloom, please fill out our intake form below and email it back to us at <a href="mailto:hello@bloom-ps.com.au?subject=Intake Form">hello@bloom-ps.com.au</a>.</p>
+                    <a href="waitlist-form.pdf" class="download-button" download="Waitlist_Form.pdf">Intake form</a>  
                     <!--<p class="mb-0">
                     To fill out the intake form on a mobile device, save the file to your device and fill using a compatible PDF reader app (e.g. Adobe).
                     </p>-->
@@ -68,11 +90,18 @@
                     <div class="row justify-content-center">
                         <div class="col-md-4 text-center">
                             <img src="Bloom Logo.png" alt="Bloom Paediatric Studio Logo" class="logo-img mb-3">
-                            <p class="mb-0"><i class="fab fa-square-facebook"></i> <a href="https://www.facebook.com/profile.php?id=61555410512704" target="_blank">Facebook</a></p>
-                            <p class="mb-0"><i class="fab fa-square-instagram"></i> <a href="https://www.instagram.com/bloom_paediatricstudio" target="_blank">Instagram</a></p>
-                            <p class="mb-0 email-text"><i class="fas fa-envelope"></i> <a href="mailto:hello@bloom-ps.com.au?subject=Inquiry from Website">Contact Us</a></p>
-                            <p class="mb-0"><i class="fas fa-map-marker-alt"></i> Emu Heights, 2750</p>
-                            <p class="mb-0"><em>by appointment only</em></p>
+                            <p class="mb-0">
+                                <a href="https://www.facebook.com/profile.php?id=61555410512704" target="_blank">
+                                    <i class="fab fa-square-facebook"></i>
+                                </a>
+                                <a href="https://www.instagram.com/bloom_paediatricstudio" target="_blank">
+                                    <i class="fab fa-square-instagram"></i>
+                                </a>
+                                <a href="mailto:hello@bloom-ps.com.au?subject=Inquiry from Website">
+                                    <i class="fas fa-envelope"></i>
+                                </a>
+                            </p>
+                                                        <p class="mb-0"><em>by appointment only</em></p>
                         </div>
                     </div>
                 </div>
