@@ -210,7 +210,7 @@ color: #8C5E58; /* Set the desired hover color */
   color: #6B4D38;
   background-color: #F9F4F4;
   padding-top: 1rem !important;  /* Adjust as needed */
-  padding-bottom: 1rem !important; /* Adjust as needed */
+  padding-bottom: 3rem !important; /* Adjust as needed */
 }
 
 .logo-circle {
@@ -228,6 +228,7 @@ color: #8C5E58; /* Set the desired hover color */
 .logo-img {
 max-width: 120px;
 height: auto;
+margin-right: 10px;
 }
 
 .wave-separator-1 {
@@ -247,12 +248,12 @@ height: auto;
 }
 
 .wavy-line-container {
-  padding-top: 350px; /* Default top padding */
+  padding-top: 400px; /* Default top padding */
 }
 
 @media (min-width: 768px) and (max-width: 991.98px) {
   .wavy-line-container {
-      margin-top: 200px; /* Adjust this value as needed */
+      margin-top: 250px; /* Adjust this value as needed */
       padding-top: 400px; /* Adjust this value as needed */
   }
 }
@@ -629,4 +630,15 @@ p.mb-0 a {
 
 p.mb-0 a:last-child {
   margin-right: 0; /* Remove margin for the last icon */
+}
+
+.contact-details .social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 10px; /* Adjust the gap between icons as needed */
+}
+
+.contact-details .social-icons a {
+  font-size: 24px; /* Adjust the icon size as needed */
+  color: #5a4334; /* Adjust the color as needed */
 }
